@@ -10,11 +10,19 @@ jobs:
       - run: ci/build-app.sh
       - name: Test
         run: ci/unit-test-app.sh
+  Upload:
+    runs-on: ubuntu-latest
+    container: gradle:6-jdk11 
+    steps:
       - name: Upload a Build Artifact # Name of the step
         uses: actions/upload-artifact@v4 # Action to use
         with: # Parameters for the action
           name: my-artifact # Name of the artifact to upload. Optional. Default is 'artifact
           path: path/to/artifact/ # A file, directory or wildcard pattern that describes what to upload. Required.
+  Download:
+    runs-on: ubuntu-latest
+    container: gradle:6-jdk11 
+    steps:
       - name: Download a single artifact # Name of the step
         uses: actions/download-artifact@v4 # Action to use
         with: # Parameters for the action
