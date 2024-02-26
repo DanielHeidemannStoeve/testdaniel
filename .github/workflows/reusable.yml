@@ -1,12 +1,13 @@
 name: Reusable workflow
-on:
+on: 
   workflow_call:
     inputs:
       who-to-greet:
-        description: 'oh hey daniel'
+        description: 'The person to greet'
         type: string
         required: true
         default: World
+jobs:
   reusable-job:
     runs-on: ubuntu-latest
     steps:
