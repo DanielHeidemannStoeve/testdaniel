@@ -27,3 +27,5 @@ jobs:
           path: path/to/download/artifact/     # Destination path. Supports basic tilde expansion.  # Optional. Default is $GITHUB_WORKSPACE
       - name: linting 
       - uses: super-linter/super-linter/slim@v.5
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
