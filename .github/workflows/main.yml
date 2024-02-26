@@ -25,4 +25,5 @@ jobs:
         with: # Parameters for the action
           name: my-artifact # Name of the artifact to download. Optional. If unspecified, all artifacts for the run are downloaded.
           path: path/to/download/artifact/     # Destination path. Supports basic tilde expansion.  # Optional. Default is $GITHUB_WORKSPACE
-    
+      - name: linting 
+      - run: super-linter/super-linter/slim
