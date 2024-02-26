@@ -26,6 +26,6 @@ jobs:
           name: my-artifact # Name of the artifact to download. Optional. If unspecified, all artifacts for the run are downloaded.
           path: path/to/download/artifact/     # Destination path. Supports basic tilde expansion.  # Optional. Default is $GITHUB_WORKSPACE
       - name: linting 
-        uses: super-linter/super-linter/slim@v.5
+        uses: super-linter/super-linter/slim@v5
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
